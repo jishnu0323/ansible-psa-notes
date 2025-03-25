@@ -19,7 +19,7 @@ a. Control Node: The machine where Ansible is installed and commands are run.
 b. Managed Nodes: The target machines that Ansible configures.
 c. Inventory: A file listing target machines, grouped by categories.
 d. Playbooks: YAML/yml files containing automation instructions.
-e. Modules: Predefined scripts that perform tasks like installing software or copying files.
+
 
 
 How to Configure Ansible?
