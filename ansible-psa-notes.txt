@@ -1,6 +1,12 @@
 What is Ansible?
 #############################
--> Ansible is an open-source automation tool used for configuration management, application deployment, copy file from one machine to another
+-> Configuration As a code (CAAC)
+
+-> Ansible is an open-source automation tool used for 
+a. configuration management
+b. application deployment
+c. copy file from one machine to another
+
 -> Examples of configuration management tools
   a. chef
   b. Puppet
