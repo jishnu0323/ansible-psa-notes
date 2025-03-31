@@ -96,3 +96,63 @@ ________________________________________________________________________________
 Step-5: Test Connectivity
 	ansible all -m ping
 ############################################################################################################
+
+Ansible ad-hoc commands allow us to run one-time commands on remote machines without writing a playbook. These commands use modules to perform tasks like checking connectivity, executing shell commands, installing packages, and managing services.
+#############################################################################################################
+
+1️⃣ Basic Syntax
+_____________________________________________________________
+ansible [all/group-name/host] -m <module> -a "<arguments>"
+_____________________________________________________________
+
+all → Runs the command on all configured hosts.
+
+group-name → Runs the command on a specific group of hosts.
+
+private-ip → Targets a specific host by its IP.
+
+-m → Specifies the Ansible module to use.
+
+-a → Passes arguments to the module.
+
+#########################################################################################
+1. Test Connectivity (ping module)
+ansible all -m ping
+✅ Effect: Pings all hosts in the inventory to verify connectivity.
+
+ansible webservers -m ping
+✅ Effect: Pings only the webservers group.
+########################################################################################
+
+2. Run Shell Commands (shell module)
+
+ansible all -m shell -a "date"
+✅ Effect: Runs the date command on all remote machines.
+
+ansible dbservers -m shell -a "df -h"
+✅ Effect: Checks disk space on all dbservers.
+###############################################################################################
+3. Install Packages (yum / apt modules)
+For RHEL/CentOS (Using yum)
+ansible all -m yum -a "name=git state=present"
+✅ Effect: Installs git on all managed hosts.
+
+ansible webservers -m yum -a "name=httpd state=latest"
+✅ Effect: Installs or updates Apache (httpd) on all webservers.
+
+For Ubuntu/Debian (Using apt)
+ansible all -m apt -a "name=nginx state=latest update_cache=yes"
+✅ Effect: Installs or updates nginx and refreshes package cache.
+##################################################################################################
+4. Start/Stop Services (service module)
+ansible webservers -m service -a "name=httpd state=started"
+✅ Effect: Starts Apache (httpd) on webservers.
+
+ansible dbservers -m service -a "name=mysql state=stopped"
+✅ Effect: Stops MySQL on dbservers.
+################################################################################################
+5. Copy Files to Remote Hosts (copy module)
+
+ansible all -m copy -a "src=/home/user/local.conf dest=/etc/config.conf mode=0644"
+✅ Effect: Copies local.conf to /etc/config.conf on all managed hosts.
+###############################################################################################
