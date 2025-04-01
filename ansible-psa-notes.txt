@@ -160,3 +160,30 @@ ansible dbservers -m service -a "name=mysql state=stopped"
 ansible all -m copy -a "src=/home/user/local.conf dest=/etc/config.conf mode=0644"
 ✅ Effect: Copies local.conf to /etc/config.conf on all managed hosts.
 ###############################################################################################
+
+Ansible Playbooks
+############################################################################################
+
+Ansible playbooks are written in YAML format.
+
+A playbook consists of one or more tasks that define actions to be performed.
+
+Playbooks specify what tasks to execute and where to execute them.
+
+The playbook is executed on the Ansible control node, which manages remote managed nodes.
+
+Note: To write Ansible playbooks effectively, you should first learn YAML.
+
+###############################################################################################
+YAML (YML)
+
+YAML stands for "Yet Another Markup Language".
+
+It is a human-readable data format that is also easily parsed by machines.
+
+YAML files use the extensions .yml or .yaml.
+
+YAML is commonly used for configuration files, data serialization, and automation tools.
+
+🔗 Official Website: yaml.org
+#############################################################################################
