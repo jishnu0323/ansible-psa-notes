@@ -138,10 +138,10 @@ ansible dbservers -m shell -a "df -h"
 ###############################################################################################
 3. Install Packages (yum / apt modules)
 For RHEL/CentOS (Using yum)
-ansible all -m yum -a "name=git state=present"
+ansible all -m yum -a "name=git state=present" -b
 ✅ Effect: Installs git on all managed hosts.
 
-ansible webservers -m yum -a "name=httpd state=latest"
+ansible webservers -m yum -a "name=httpd state=latest" -b
 ✅ Effect: Installs or updates Apache (httpd) on all webservers.
 
 For Ubuntu/Debian (Using apt)
@@ -164,7 +164,7 @@ ansible all -m copy -a "src=/home/user/local.conf dest=/etc/config.conf mode=064
 Ansible Playbooks
 ############################################################################################
 
-Ansible playbooks are written in YAML format.
+Ansible playbooks are written in YAML/yml format.
 
 A playbook consists of one or more tasks that define actions to be performed.
 
@@ -177,7 +177,7 @@ Note: To write Ansible playbooks effectively, you should first learn YAML.
 ###############################################################################################
 YAML (YML)
 
-YAML stands for "Yet Another Markup Language".
+YAML stands for "YAML Ain't Markup Language".
 
 It is a human-readable data format that is also easily parsed by machines.
 
