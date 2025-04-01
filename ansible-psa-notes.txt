@@ -187,3 +187,15 @@ YAML is commonly used for configuration files, data serialization, and automatio
 
 🔗 Official Website: yaml.org
 #############################################################################################
+
+Sample yml file:
+______________________________________________
+
+indentation is very important
+
+name: satish
+age: 23
+courses:
+     - java
+     - testing
+     - python
