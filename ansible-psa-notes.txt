@@ -239,3 +239,74 @@ c. Task Section
 -> Helps in avoiding hardcoding values.
 
 3. Task Section - Defines the operations to be performed using Ansible.
+
+Example to run playbook:  $ ansible-playbook webserver-setup.yml
+
+______________________________________________________________________________
+
+####################################
+Playbook to ping managed nodes
+#######################################
+
+---
+- hosts: all
+  tasks:
+  - name: ping all managed nodes
+    ping:
+...
+
+# It will check the syntax of a playbook
+$ ansible-playbook <playbook-yml-file> --syntax-check
+
+# It will display which hosts would be effected by a playbook before run
+$ ansible-playbook <playbook-yml-file> --list-hosts
+
+# Run the playbook Using below command
+$ ansible-playbook <playbook-yml-file>
+
+# It execute one-step-at-a-time, confirm each task before running with (N)o/(y)es/(c)ontinue
+$ ansible-playbook <playbook-yml-file> --step
+
+# Run the playbook in verbose mode
+$ ansible-playbook <playbook-yml-file> -vvv
+
+Example 2:
+__________________
+
+---
+- hosts: all
+  tasks:
+  - name: create a file
+    file: 
+     path: /home/ansible/t1.txt
+     state: touch
+...
+
+Example 3:
+---
+- hosts: all
+  tasks: 
+  - name: copy content to file
+    copy: content="Hello world\n" dest="/home/ansible/t1.txt"
+...
+
+Example 4:
+
+---
+- hosts: webservers
+  become: true #use it if you need sudo priviliges
+  tasks:
+  - name: install httpd package
+    yum:
+     name: httpd
+     state: latest
+  - name: copy index.html file
+    copy:
+     src: index.html
+     dest: /var/www/html/index.html
+  - name: start httpd service
+    service: 
+     name: httpd
+     state: started
+...
+
