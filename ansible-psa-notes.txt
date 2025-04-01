@@ -199,3 +199,15 @@ courses:
      - java
      - testing
      - python
+
+2nd Example of yml
+___________________________________________________
+
+employee:
+   id: 100
+   name: satish
+   department: It
+   address:
+    city: bengaluru
+    state: karnataka
+    country: india
