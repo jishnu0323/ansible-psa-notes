@@ -211,3 +211,7 @@ employee:
     city: bengaluru
     state: karnataka
     country: india
+   skills:
+       - java
+       - microservices
+       - aws
