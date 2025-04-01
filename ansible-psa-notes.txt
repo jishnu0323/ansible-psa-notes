@@ -122,6 +122,10 @@ ansible all -m ping
 
 ansible webservers -m ping
 ✅ Effect: Pings only the webservers group.
+
+uptime
+✅ From what time server is running in control node.
+
 ########################################################################################
 
 2. Run Shell Commands (shell module)
