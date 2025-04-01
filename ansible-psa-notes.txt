@@ -238,4 +238,4 @@ c. Task Section
 -> Declares variables that can be used throughout the playbook.
 -> Helps in avoiding hardcoding values.
 
-3. Task Section - Defines the operations to be performed using Ansible modules.
+3. Task Section - Defines the operations to be performed using Ansible.
