@@ -202,7 +202,7 @@ courses:
 
 2nd Example of yml
 ___________________________________________________
-
+---
 employee:
    id: 100
    name: satish
@@ -215,3 +215,7 @@ employee:
        - java
        - microservices
        - aws
+...
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Website To validate YML syntax : https://www.yamllint.com/
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
