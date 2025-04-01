@@ -219,3 +219,23 @@ employee:
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 Website To validate YML syntax : https://www.yamllint.com/
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+#########################################
+How to create playbook
+####################################
+
+Structure of an Ansible Playbook - A playbook in Ansible consists of three main sections:
+
+a. Host Section
+
+b. Variable Section
+
+c. Task Section
+
+1. Host Section: Defines the target machines on which the tasks will be executed.
+
+2. Variable Section
+-> Declares variables that can be used throughout the playbook.
+-> Helps in avoiding hardcoding values.
+
+3. Task Section - Defines the operations to be performed using Ansible modules.
