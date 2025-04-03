@@ -149,7 +149,7 @@ ansible all -m apt -a "name=nginx state=latest update_cache=yes"
 ✅ Effect: Installs or updates nginx and refreshes package cache.
 ##################################################################################################
 4. Start/Stop Services (service module)
-ansible webservers -m service -a "name=httpd state=started"
+ansible webservers -m service -a "name=httpd state=started" -b
 ✅ Effect: Starts Apache (httpd) on webservers.
 
 ansible dbservers -m service -a "name=mysql state=stopped"
